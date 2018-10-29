@@ -94,7 +94,7 @@ html{
 }
 
 .navigation a {
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans', cursive;
   font-size: 32px;
   text-decoration: none;
   display: block;
@@ -107,14 +107,14 @@ html{
     color: red;
 }
 
-/*@media all and (max-width: 1281px) {
+@media all and (max-width: 800px) {
   .navigation {
     justify-content: space-around;
       align-items: center;
   }
-}*/
+}
 
-@media all and (max-width: 1281px) {
+@media all and (max-width: 800px) {
   .navigation {
     -webkit-flex-flow: column wrap;
     flex-flow: column wrap;
@@ -138,6 +138,7 @@ html{
   }
 }
 
+
 h1{
   font-family: 'Fira Sans', sans-serif;
   font-weight:normal;
@@ -151,36 +152,55 @@ h1{
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   padding-right: 1em;
   padding-top: 5em;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-top: 0px solid rgba(255,255,255,0.3);
+  border-bottom: 0px solid rgba(0,0,0,0.1);
 }
 #hbout{
   flex-basis: 100%
 }
 #box1{
-flex-basis: 50%;
-padding-bottom: 4em;
+  order: 2;
+  flex-basis: 50%;
+  padding-bottom: 4em;
 }
 
 #profilepic{
-  display:flex;
+  display: flex;
+  flex-flow: row wrap-reverse;
   padding-bottom: 4em;
-  padding-left:  2em;
-  margin: auto;
 }
 
-img{
-    display: block;
+
+#profilepic img {
+    padding: 2em;
+
+    border-radius: 50%;
     max-width: 100%
+   }
+  figcaption{
+    font-family: 'Reenie Beanie', cursive;
+    font-weight:normal;
+    text-align: left;
+    color: #2c2e2d;
+    font-size:32px;
   }
+
 #box11{
   order: 3;
   flex-basis: 50%;
-  padding-left:  2em;
 }
+/*
+@media query {all and (max-width: 800px) {
+#box1{
+  flex-basis: 50%;
+}
+#box11{
+  flex-basis: 50%;
+}
+}*/
 
 /*
 #profilepic >img{
@@ -196,16 +216,11 @@ img{
   align-items: center;
   justify-content: space-between;
   padding-right: 1em;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-top: 0px solid rgba(255,255,255,0.3);
+  border-bottom: 0px solid rgba(0,0,0,0.1);
 }
 
-#box1 img {
-  padding: 2em;
-  display: block;
-  border-radius: 50%;
-  max-width: 100%
- }
+
 #hpro{
   flex-basis: 100%
 }
@@ -226,26 +241,13 @@ img{
   flex-basis: 25%;
 }
 
-#photography{
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 1em;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-}
 
-#hphoto{
-  flex-basis: 100%
-}
 
 img{
   display: block;
   max-width: 100%
 }
+
 .projectbox{
   display: flex;
   width: 100%;
@@ -261,9 +263,24 @@ padding-right:3em;
 padding-top:1.5em;
 padding-bottom:1.5em;
 }
+#photography{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1em;
+  border-top: 0px solid rgba(255,255,255,0.3);
+  border-bottom: 0px solid rgba(0,0,0,0.1);
+}
+
+#hphoto{
+  flex-basis: 100%
+}
+
 #photobox{
   display: flex;
-
   flex-flow: row wrap-reverse;
 
 
@@ -279,7 +296,6 @@ padding-bottom:1.5em;
 
 .travelbox{
   display: flex;
-
   flex-flow: row wrap-reverse;
 }
 .travelbox li {
@@ -288,6 +304,9 @@ padding-left:3em;
 padding-right:3em;
 padding-top:1.5em;
 padding-bottom:1.5em;
+}
+.tra a:hover {
+    opacity: 50%;
 }
 /*#box3{
   order: 2;
@@ -323,8 +342,8 @@ padding-bottom:1.5em;
   align-items: center;
   justify-content: space-between;
   padding-right: 1em;
-  border-top: 1px solid rgba(255,255,255,0.3);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-top: 0px solid rgba(255,255,255,0.3);
+  border-bottom: 0px solid rgba(0,0,0,0.1);
 }
 #htravel{
   flex-basis: 100%
@@ -343,17 +362,18 @@ padding-bottom:1.5em;
 }
 
 h3,h4,h5,h6 {
-  font-family: 'Questrial', sans-serif;
+  font-family: 'News Cycle', sans-serif;
   color: #2c2e2d;
   font-size:3.22em;
 }
-
+/*
 h7 {
   font-family: 'Questrial', sans-serif;
   color: #2c2e2d;
   font-size:3.22em;
   text-align: center;
 }
+*/
 #contact{
   display: flex;
   width: 100%;
@@ -366,6 +386,10 @@ h7 {
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 #hcontact{
+  font-family: 'News Cycle', sans-serif;
+  color: #2c2e2d;
+  font-size:3.22em;
+  text-align: center;
   flex-basis: 100%
 }
 
