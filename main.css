@@ -89,7 +89,8 @@ html{
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
+
+
   justify-content: flex-end;
 }
 
@@ -98,9 +99,11 @@ html{
   font-size: 32px;
   text-decoration: none;
   display: block;
-  padding-left:  1em;
-  padding-right:  1em;
+  padding:  0em 0.5em;
   color: #2c2e2d;
+}
+#nav{
+  padding-top: 40px;
 }
 
 .navigation a:hover {
@@ -124,10 +127,7 @@ html{
   .navigation a {
     font-size: 20px;
     text-align: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding top:0.2em;
-    padding-bottom: 0.2em;
+    padding: 0.5em 0;
     border-top: 1px solid rgba(255,255,255,0.3);
     border-bottom: 1px solid rgba(0,0,0,0.1);
   }
